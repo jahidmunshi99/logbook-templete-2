@@ -2,137 +2,68 @@
 } */
 /* ➡️ Large tablets/laptops: 992px to 1199px  */
 @media (max-width:992px){
-/* Hmburget Section Start */
-#humburger{
-    display: block;
-}
-    #menuIcon.active{
+    .nav-links{
         display: none;
     }
-    #closeX.active{
-        visibility: visible;
-        pointer-events: all;
+    #nav-menu .nav-search i{
+        padding: 0 1rem;
+        font-size: 2rem;
     }
-    .nav-menu{
-        display: none;
-        flex-direction: column;
+    #humburgetBtn{
+        display: block;
+    }
+    /* Main-Group */
+    .main-group {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* Left */
+    .post-content{
+        padding: 1.5rem 0rem;
+    }
+
+    /* Right */
+    .right-content {
+        padding: 0;
+    }
+    .service-info {
+        padding: 3rem;
         position: absolute;
-        top: 3.5rem;
-        border-top: 1px solid #ffffff;
-        width: 100%;
-        height: 100vh;
-        background: #000000;
-        z-index: 1001;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        width: 80%;
     }
-    .nav-menu.active{
-        display: block;
-    }
-    .main-menu ul{
-        flex-direction: column;
-        width: 100%;
-    }
-    .main-menu ul li:hover{
-        background: rgba(41, 41, 41, 0.506);
-        width: 100%;
-    }
-    .nav-group{
-        display: block;
-    }
-    .nav-button{
-        margin-top: 2rem;
-    }
-/* Hero Section */
-    .hero-content {
-        width: 100%;
-    }
-/* Service Section */
-    .service-group{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-/* Portfolio Section */
-    .portfolio-group{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-/* Testimonial Section */    
-    .testimonial-group {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+/* Hmburget Section Start */
+
 }
 
 /* ➡️ Small tablets: 768px to 991px  */
 @media (max-width:768px){ 
-/* Reusable Components */
-    .section-title{
+    .item-content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
+        color: #000;
+    }  
+    .item-content a {
+        color: var(--black-color);
     }
-    .section-details {
+    /* Left */
+    .post-group {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 3rem;
+    }
+    .service-info {
         width: 100%;
     }
-/* Service Section */
-    .service-group{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-/* Section Section */
-    .section-group {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 2rem;
-    }
-    .about-content {
-        text-align: center;
-    }
-    .about-content h3::after{
-        top: 1rem;
-        text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-/* Skills Section */
-    #skills{
-        padding: 2.5rem 0;
-    }
-    .skills-content{
-        text-align: center;
-    }
-    .skills-content h3::before{
-        top: 1rem;
-        text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .content-item {
-        flex-direction: column;
-    }
-/* Portfolio Section */
-    .portfolio-group{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }    
-/* Testimonial Section */    
-    .testimonial-group {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-/* Contact Section */    
+}
 
-    .contact-group {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    #contact .section-title, 
-    #contact .section-details {
-        text-align: center;
-    }
-    .contact-button{
-        text-align: center;
-    }
-    /* .slider{
-        grid-template-rows: minmax(auto, 200px);
-    } */
 @media (max-width:480px){    
 }
 ➡️ Mobile: Up to 480px 

@@ -175,24 +175,57 @@ img{
 }
 .nav-links ul li{
     padding: 1.3rem 2rem;
+    position: relative;
 }
 .nav-links ul li:nth-child(6) a{
     background: var(--border-color);
     padding: 0.01rem 0.3rem;
 }
 #nav-menu .nav-search{
+    display: flex;
     padding: 1.3rem;
     color: var(--white-color);
     margin-left: 1.5rem;
 }
+#select-language{
+    border: none;
+    background: none;
+}
 /* Hover */
-.nav-links ul li:hover a,
-.nav-search:hover i{
+.nav-links ul li a:hover,
+.nav-links ul li a:hover i,
+.nav-search i:hover{
     color: var(--btn-bg-hover-color);
     transition: all 0.3s ease-in-out;
 }
 .nav-area.stricky{
     background: var(--navbar-bg-color);
+}
+/* DropDown Menu */
+.dropdown ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    /* background: #000; */
+    color: var(--white-color);
+    width: 100%;
+    margin-top: 0.7rem;
+    visibility: hidden;
+}
+.dropdown ul li{
+    padding: 1rem;
+    background: #000;
+    border-top: 0.1rem solid var(--white-color);
+}
+.dropdown ul li a{
+    color: var(--white-color);
+}
+/* Humburger */
+#humburgetBtn{
+    display: none;
+    font-size: rem;
 }
 /*-- ============================ Hero ============================= */
 #hero{
@@ -280,9 +313,7 @@ img{
 }
 /* Left */
 .left{
-    /* background: #eaeaea; */
-    width: 100%;
-    height: 100vh;
+        /* background: #eaeaea; */
 }
 .post-group{
     display: grid;
@@ -375,20 +406,23 @@ img{
     padding: 5rem 0;
 }
 .about-gorup{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 2rem;
+    /* display: flex;
+    justify-content: space-between; */
     /* background: #000; */
 }
 .about-gorup .image{
-    flex-basis: 30%;
-    height: 130px;
+    grid-template-rows: minmax(30rem, auto);
 }
 .about-gorup .image img{
     height: 100%;
+    display: block;
 }
-.about-content{
+/* .about-content{
     flex-basis: 65%;
-}
+} */
 .social-icon i{
     font-size: 2.2rem;
     padding-right: 1.1rem;
@@ -418,7 +452,7 @@ img{
 }
 /*-- ============== Service =============== */
 #service{
-    padding-bottom: 5rem;
+    padding: 5rem 0;
 }
 .service-group{
     text-align: center;
@@ -504,10 +538,10 @@ img{
 
 .article-item{
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 1rem;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2rem;
     align-items: center;
-    margin: 2rem 0;
+    margin: 2rem 0;    
 }
 .article-item .image img{
     width: 7.5rem;
